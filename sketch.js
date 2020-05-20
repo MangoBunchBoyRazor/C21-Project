@@ -85,14 +85,14 @@ function hasCollided(object1,object2){
   //Testing for collision
   if(object1.x+object1.width>object2.x){    
     object1.velocityX = 0;  //Setting the car velocity to 0
-  
+    object1.x = object2.x - object1.width + 10;
+    
     return true;
   }
   return false;
 }
 function damage(){
-  damage1 = Math.round((0.5 * weight * (speed * speed)) / (thickness*thickness*thickness));
-  bullet.x = wall.x - bullet.width + 10; 
+  damage1 = Math.round((0.5 * weight * (speed * speed)) / (thickness*thickness*thickness)); 
   let c = 0;
 
   textAlign(CENTER);
