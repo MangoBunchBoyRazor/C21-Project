@@ -92,7 +92,7 @@ function hasCollided(object1,object2){
 }
 function damage(){
   damage1 = Math.round((0.5 * weight * (speed * speed)) / (thickness*thickness*thickness));
-  bullet.x = wall.x - bullet.width + damage1; 
+  bullet.x = wall.x - bullet.width + 10; 
   let c = 0;
 
   textAlign(CENTER);
